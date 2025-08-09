@@ -1,0 +1,42 @@
+[
+    {
+        "title" : "first",
+        "content" : [
+            "privacy & policy",
+            "contact",
+            "services",
+            "about us",
+            "lorem"
+        ]
+    },
+        {
+        "title" : "second",
+        "content" : [
+            "privacy & policy",
+            "contact",
+            "services",
+            "about us",
+            "lorem"
+        ]
+    },
+        {
+        "title" : "third",
+        "content" : [
+            "privacy & policy",
+            "contact",
+            "services",
+            "about us",
+            "lorem"
+        ]
+    },
+    {
+        "title" : "fourth",
+        "content" : [
+            "privacy & policy",
+            "contact",
+            "services",
+            "about us",
+            "lorem"
+        ]
+    }
+]
