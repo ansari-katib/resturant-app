@@ -1,95 +1,214 @@
 import React, { useState } from "react";
-import { FaFilter, FaTimes, FaSearch } from "react-icons/fa";
 
 const Filter_Content = () => {
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedPrice, setSelectedPrice] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [selectedFilters, setSelectedFilters] = useState({});
+  const [sortBy, setSortBy] = useState(SortByData[0].action[0]);
 
-  const categories = ["Biryani/Rice", "Pizza", "Burger", "Starter"];
-  const priceRanges = ["Under ₹100", "₹100 - ₹200", "₹200 - ₹500"];
+  const toggleFilter = () => setIsFilterOpen(!isFilterOpen);
 
-  const clearFilters = () => {
-    setSelectedCategory("");
-    setSelectedPrice("");
-    setSearchTerm("");
+  const handleSelectChange = (sectionTitle, value) => {
+    setSelectedFilters((prev) => ({
+      ...prev,
+      [sectionTitle]: value,
+    }));
+  };
+
+  const applyFilters = () => {
+    console.log("Filters:", selectedFilters);
+    console.log("Sort By:", sortBy);
+    setIsFilterOpen(false);
+  };
+
+  const removeFilterTag = (sectionTitle) => {
+    setSelectedFilters((prev) => {
+      const updated = { ...prev };
+      delete updated[sectionTitle];
+      return updated;
+    });
   };
 
   return (
-    <div className="bg-orange-50 p-6 rounded-xl mt-5 shadow-lg w-full max-w-6xl mx-auto mb-5 transition-all duration-300 hover:shadow-xl">
-      {/* Header */}
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg md:text-xl font-bold flex items-center gap-2 text-orange-600">
-          <FaFilter /> Filter Items
-        </h2>
-        {(selectedCategory || selectedPrice || searchTerm) && (
-          <button
-            onClick={clearFilters}
-            className="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full hover:bg-gray-300 transition"
-          >
-            <FaTimes /> Clear All
-          </button>
-        )}
-      </div>
+    <div className=" flex items-center justify-center my-5">
 
-      {/* Filters */}
-      <div className="flex flex-col md:flex-row gap-4 items-center">
-        {/* Search */}
-        <div className="flex items-center w-full md:w-auto flex-1 border rounded-lg px-3 py-2 bg-white shadow-sm">
-          <FaSearch className="text-gray-500 mr-2" />
-          <input
-            type="text"
-            placeholder="Search items..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full focus:outline-none"
-          />
+      {/* Sort By Dropdown */}
+      <div className=" mx-3 md:flex md:items-center gap-4 mb-4">
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="border border-gray-400 text-gray-500 p-2 rounded"
+        >
+          {SortByData[0].action.map((option) => (
+            <option key={option}>{option}</option>
+          ))}
+        </select>
+
+        {/* Filter Button */}
+        <button
+          onClick={toggleFilter}
+          className="px-3 py-3 ml-1 bg-gray-100 rounded-xl text-gray-500 hover:bg-gray-200"
+        >
+          {Filterdata[0].dropdown}
+        </button>
+
+        {/* Static sort buttons row */}
+        <div className="flex flex-wrap md:flex md:items-center gap-2 overflow-x-auto scrollbar-hide py-2">
+          {sortBtn.map((item, index) => (
+            <button
+              key={index}
+              className="bg-gray-100 px-3 py-2 md:px-4 md:py-3 rounded-xl text-xs md:text-sm text-gray-500 hover:bg-gray-200 whitespace-nowrap"
+            >
+              {item}
+            </button>
+          ))}
         </div>
 
-        {/* Category */}
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="flex-1 border rounded-lg px-4 py-2 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
-        >
-          <option value="">All Categories</option>
-          {categories.map((cat, index) => (
-            <option key={index} value={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
 
-        {/* Price */}
-        <select
-          value={selectedPrice}
-          onChange={(e) => setSelectedPrice(e.target.value)}
-          className="flex-1 border rounded-lg px-4 py-2 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
-        >
-          <option value="">All Prices</option>
-          {priceRanges.map((range, index) => (
-            <option key={index} value={range}>
-              {range}
-            </option>
-          ))}
-        </select>
-
-        {/* Apply Button */}
-        <button
-          onClick={() =>
-            alert(
-              `Filtering by: ${searchTerm || "Any"} / ${
-                selectedCategory || "All Categories"
-              } / ${selectedPrice || "All Prices"}`
-            )
-          }
-          className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-400 transition font-medium shadow-md w-full md:w-auto"
-        >
-          Apply
-        </button>
       </div>
+
+      {/* Selected Filter Tags */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {Object.entries(selectedFilters).map(([title, value]) => (
+          <span
+            key={title}
+            className="flex items-center gap-1 bg-gray-200 px-3 py-1 rounded-full text-sm"
+          >
+            {title}: {value}
+            <button
+              onClick={() => removeFilterTag(title)}
+              className="text-red-500"
+            >
+              ✕
+            </button>
+          </span>
+        ))}
+      </div>
+
+      {/* Filter Modal */}
+      {isFilterOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-100 flex justify-center items-center z-50">
+          <div className="bg-white rounded-lg w-96 p-4 max-h-[80vh] overflow-y-auto">
+            <div className="flex justify-between items-center border-b pb-2 mb-4">
+              <h2 className="text-lg font-semibold">
+                {Filterdata[0].dropdown}
+              </h2>
+              <button onClick={toggleFilter} className="text-red-500">
+                ✕
+              </button>
+            </div>
+
+            {/* Filter Sections */}
+            {Object.keys(Filterdata[0]).map((key) => {
+              const section = Filterdata[0][key];
+              if (!section?.title || !section?.data) return null;
+
+              return (
+                <div key={section.title} className="mb-4">
+                  <h3 className="font-medium mb-2">{section.title}</h3>
+                  {Array.isArray(section.data) ? (
+                    <select
+                      value={selectedFilters[section.title] || ""}
+                      onChange={(e) =>
+                        handleSelectChange(section.title, e.target.value)
+                      }
+                      className="border p-2 rounded w-full"
+                    >
+                      <option value="">Select</option>
+                      {section.data.map((item) => (
+                        <option key={item}>{item}</option>
+                      ))}
+                    </select>
+                  ) : (
+                    <select
+                      value={selectedFilters[section.title] || ""}
+                      onChange={(e) =>
+                        handleSelectChange(section.title, e.target.value)
+                      }
+                      className="border p-2 rounded w-full"
+                    >
+                      <option value="">{section.data}</option>
+                    </select>
+                  )}
+                </div>
+              );
+            })}
+
+            {/* Apply Button */}
+            <button
+              onClick={applyFilters}
+              className="bg-blue-500 text-white px-4 py-2 rounded w-full"
+            >
+              Apply Filters
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
 
 export default Filter_Content;
+
+// JSON Data
+const Filterdata = [
+  {
+    dropdown: "Filter",
+    section1: {
+      title: "Sort",
+      data: [
+        "Relevance",
+        "Distance : Nearby to Far",
+        "popularity : high to low",
+        "cost of to : low to high",
+        "cost of two : high to low",
+      ],
+    },
+    section2: {
+      title: "Book a table",
+      data: "select tag",
+    },
+    section3: {
+      title: "Cuisine",
+      data: ["American", "Arabian", "Asian", "BBQ", "Bihari"],
+    },
+    section4: {
+      title: "Distance",
+      data: ["All", "Within 2km", "Within 5km", "Within 10km", "Within 15km"],
+    },
+    section5: {
+      title: "Rating",
+      data: ["Rating 4.5+", "Rating 4+", "Rating 3.5+"],
+    },
+    section6: {
+      title: "cost of two",
+      data: [
+        "less than $1000",
+        "1000 $2000",
+        "2000 $3000",
+        "3000 $4000",
+      ],
+    },
+  },
+];
+
+const SortByData = [
+  {
+    dopdown: "Sort By",
+    action: [
+      "Distance : Nearby to Far",
+      "popularity : high to low",
+      "cost of to : low to high",
+      "cost of two : high to low",
+    ],
+    btn: "apply",
+  },
+];
+
+const sortBtn = [
+  "Book a table",
+  "Within 5km",
+  "Rating 4+",
+  "Pure veg",
+  "server alcohol",
+];

@@ -20,121 +20,123 @@ import res_image_2 from '../../assets/res_2.jpg';
 const navigation = {
   categories: [
     {
-      id: 'women',
+      id: 'services',
       name: 'Services',
       featured: [
         {
-          name: 'New resturants',
+          name: 'New Restaurants',
           href: '#',
           imageSrc: res_image_2,
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+          imageAlt: 'Freshly opened restaurants in your city.',
         },
         {
-          name: 'popular resturant',
+          name: 'Popular Restaurants',
           href: '#',
           imageSrc: res_image_1,
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+          imageAlt: 'Most loved restaurants by diners.',
         },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'available locations',
+          id: 'locations',
+          name: 'Available Locations',
           items: [
-            { name: 'pune', href: '#' },
-            { name: 'mumbai', href: '#' },
-            { name: 'hydrabad', href: '#' },
-            { name: 'chennai', href: '#' },
-            { name: 'kerala', href: '#' },
-            { name: 'delhi', href: '#' },
-            { name: 'assam', href: '#' },
-            { name: 'punjab', href: '#' },
-            { name: 'shimla', href: '#' },
+            { name: 'Pune', href: '#' },
+            { name: 'Mumbai', href: '#' },
+            { name: 'Hyderabad', href: '#' },
+            { name: 'Chennai', href: '#' },
+            { name: 'Kerala', href: '#' },
+            { name: 'Delhi', href: '#' },
+            { name: 'Assam', href: '#' },
+            { name: 'Punjab', href: '#' },
+            { name: 'Shimla', href: '#' },
           ],
         },
         {
-          id: 'accessories',
-          name: 'queseen',
+          id: 'cuisines',
+          name: 'Cuisines',
           items: [
-            { name: 'chinease', href: '#' },
-            { name: 'french', href: '#' },
-            { name: 'indian', href: '#' },
-            { name: 'arabic', href: '#' },
-            { name: 'indonesian', href: '#' },
-            { name: 'turkish', href: '#' },
+            { name: 'Chinese', href: '#' },
+            { name: 'French', href: '#' },
+            { name: 'Indian', href: '#' },
+            { name: 'Arabic', href: '#' },
+            { name: 'Indonesian', href: '#' },
+            { name: 'Turkish', href: '#' },
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: 'services',
+          name: 'Dining Options',
           items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
+            { name: 'Fine Dining', href: '#' },
+            { name: 'Casual Dining', href: '#' },
+            { name: 'Buffet', href: '#' },
+            { name: 'Cafe', href: '#' },
+            { name: 'Food Truck', href: '#' },
           ],
         },
       ],
     },
     {
-      id: 'men',
+      id: 'food',
       name: 'Food',
-     featured: [
+      featured: [
         {
-          name: 'New resturants',
+          name: 'New Dishes',
           href: '#',
           imageSrc: res_image_2,
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        }
+          imageAlt: 'Recently added dishes on the menu.',
+        },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'available locations',
+          id: 'locations',
+          name: 'Available Locations',
           items: [
-            { name: 'pune', href: '#' },
-            { name: 'mumbai', href: '#' },
-            { name: 'hydrabad', href: '#' },
-            { name: 'chennai', href: '#' },
-            { name: 'kerala', href: '#' },
-            { name: 'delhi', href: '#' },
-            { name: 'assam', href: '#' },
-            { name: 'punjab', href: '#' },
-            { name: 'shimla', href: '#' },
+            { name: 'Pune', href: '#' },
+            { name: 'Mumbai', href: '#' },
+            { name: 'Hyderabad', href: '#' },
+            { name: 'Chennai', href: '#' },
+            { name: 'Kerala', href: '#' },
+            { name: 'Delhi', href: '#' },
+            { name: 'Assam', href: '#' },
+            { name: 'Punjab', href: '#' },
+            { name: 'Shimla', href: '#' },
           ],
         },
         {
-          id: 'accessories',
-          name: 'queseen',
+          id: 'cuisines',
+          name: 'Cuisines',
           items: [
-            { name: 'chinease', href: '#' },
-            { name: 'french', href: '#' },
-            { name: 'indian', href: '#' },
-            { name: 'arabic', href: '#' },
-            { name: 'indonesian', href: '#' },
-            { name: 'turkish', href: '#' },
+            { name: 'Chinese', href: '#' },
+            { name: 'French', href: '#' },
+            { name: 'Indian', href: '#' },
+            { name: 'Arabic', href: '#' },
+            { name: 'Indonesian', href: '#' },
+            { name: 'Turkish', href: '#' },
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: 'specials',
+          name: 'Specials',
           items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
+            { name: 'Chef’s Special', href: '#' },
+            { name: 'Today’s Special', href: '#' },
+            { name: 'Seasonal Menu', href: '#' },
+            { name: 'Vegan Options', href: '#' },
+            { name: 'Gluten-Free Options', href: '#' },
           ],
         },
       ],
     },
   ],
   pages: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' },
+    { name: 'About Us', href: '#' },
+    { name: 'Contact', href: '#' },
+    { name: 'Reservations', href: '#' },
   ],
-}
+};
+
 
 export default function Example() {
   const [open, setOpen] = useState(false)
@@ -252,9 +254,7 @@ export default function Example() {
       </Dialog>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-orange-400 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
-        </p>
+
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
@@ -278,7 +278,7 @@ export default function Example() {
                     className="h-8 w-auto"
                     src=''
                   /> */}
-                  <h1 className='text-2xl flex font-bold underline'><p className='text-orange-500'>My</p>Resturant</h1>
+                  <h1 className='text-2xl flex font-bold underline font-serif'><p className='text-orange-500'>apna</p>Dhaba</h1>
                 </a>
               </div>
 
@@ -365,12 +365,23 @@ export default function Example() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+
+                  <div className="flex items-center bg-gray-200 rounded-xl p-2 border border-gray-400">
+                    <input
+                      className="bg-gray-200 outline-none flex-1"
+                      placeholder="Enter here"
+                    />
+                    <MagnifyingGlassIcon
+                      aria-hidden="true"
+                      className="text-gray-500 h-5 w-5"
+                    />
+                  </div>
+
+
+                  <span aria-hidden="true" className="h-6 w-px bg-gray-600" />
+
                   <a href="/auth" className="text-sm font-medium text-gray-700 hover:text-gray-800 hover:bg-orange-300 p-3 bg-orange-400 rounded-lg">
                     Sign in
-                  </a>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-600" />
-                  <a href="/auth" className="text-sm font-medium text-gray-700 hover:text-gray-800 hover:bg-orange-300 p-3 bg-orange-400 rounded-lg">
-                    Create account
                   </a>
                 </div>
 
@@ -385,7 +396,7 @@ export default function Example() {
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -397,7 +408,7 @@ export default function Example() {
 
 export const Navbar = () => {
   return (
-    <div> 
+    <div>
       <Example />
     </div>
   )

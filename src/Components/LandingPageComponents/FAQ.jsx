@@ -41,7 +41,7 @@ const FAQ = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center text-purple-600 mb-8">
+      <h2 className="text-3xl font-bold text-center text-orange-600 mb-8">
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">
@@ -56,7 +56,7 @@ const FAQ = () => {
               className="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition"
             >
               {faq.question}
-              <span className="text-purple-600 text-lg">
+              <span className="text-orange-600 text-lg">
                 {openIndex === index ? "−" : "+"}
               </span>
             </button>

@@ -7,7 +7,7 @@ import ResturantsCards from '../Components/LandingPageComponents/ResturantsCards
 // import SearchResturant from '../Components/LandingPageComponents/SearchResturant';
 import ContactUsForm from '../Components/LandingPageComponents/ContactUsForm';
 import FAQ from '../Components/LandingPageComponents/FAQ';
-import AboutUs from '../Components/LandingPageComponents/AboutUs';
+import { Review } from '../Components/LandingPageComponents/Review';
 
 const LandingPage = () => {
   return (
@@ -17,11 +17,9 @@ const LandingPage = () => {
       {/* <SearchResturant /> */}
       <Filter_Content />
       <ResturantsCards />
+      <Review />
       <FAQ />
-      <div className='grid grid-cols-1 md:grid-cols-2 '>
-        <AboutUs />
-        <ContactUsForm />
-      </div>
+      <ContactUsForm />
       <Footer />
     </div>
   )

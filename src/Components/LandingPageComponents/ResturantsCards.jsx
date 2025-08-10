@@ -1,12 +1,12 @@
 import React from "react";
-import restaurantsData from "../../Json/CardContents.js"; // adjust path if needed
+import restaurantsData from "../../Json/CardContents.js";
 
 const ResturantsCards = () => {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 py-12">
       <h2 className="text-3xl font-extrabold text-center mb-10 relative text-gray-800">
         Restaurants
-        <span className="block w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mt-2 rounded-full"></span>
+        <span className="block w-20 h-1 bg-gray-600 mx-auto mt-2 rounded-full"></span>
       </h2>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
@@ -26,7 +26,7 @@ const ResturantsCards = () => {
 
               <div className="p-5">
                 {/* Restaurant Name */}
-                <h3 className="text-xl font-bold text-orange-600 mb-1">
+                <h3 className="text-xl font-bold text-gray-600 mb-1">
                   {rest.restaurant_name}
                 </h3>
 
@@ -42,21 +42,21 @@ const ResturantsCards = () => {
 
                 {/* Rating & Time */}
                 <div className="flex justify-between items-center mt-4">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                  <span className="bg-black text-white px-3 py-1 rounded-full text-sm font-medium shadow-sm">
                     ⭐ {rest.rating}
                   </span>
-                  <span className="text-orange-500 text-sm font-semibold">
-                    ⏰ {rest.open_Time} - {rest.close_Time}
+                  <span className=" text-sm  font-semibold">
+                    ⏰ <span className="text-green-600">{rest.open_Time}</span>  - <span className="text-red-600">{rest.close_Time}</span>
                   </span>
                 </div>
 
                 {/* Button */}
                 <div className="flex gap-2" >
-                  <button className="mt-5 w-full text-sm bg-gradient-to-r from-orange-500 to-yellow-400 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
-                    🍽 Book Seat
+                  <button className="mt-5 w-full text-sm bg-black text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                    Book Seat
                   </button>
-                  <button className="mt-5 w-full text-sm  bg-gradient-to-r from-orange-500 to-yellow-400 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
-                    🍽 Order Food
+                  <button className="mt-5 w-full text-sm  bg-black text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                    Order Food
                   </button>
                 </div>
 
