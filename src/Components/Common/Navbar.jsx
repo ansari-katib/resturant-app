@@ -247,12 +247,12 @@ export default function Example() {
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-800 hover:bg-orange-400 rounded-2xl">
+                <a href="/auth" className="-m-2 block p-2 font-medium text-gray-800 hover:bg-orange-400 rounded-2xl">
                   Sign in
                 </a>
               </div>
               <div className="flow-root ">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900 hover:bg-orange-400 rounded-2xl">
+                <a href="/auth" className="-m-2 block p-2 font-medium text-gray-900 hover:bg-orange-400 rounded-2xl">
                   Create account
                 </a>
               </div>
