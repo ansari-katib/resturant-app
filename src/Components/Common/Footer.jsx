@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-6 gap-8">
         {/* Company Logo Section */}
         <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start">
-            <h1 className='text-2xl flex font-bold underline font-serif mb-5'><p className='text-orange-500'>apna</p>Dhaba</h1>
+            <h1 className='text-2xl flex font-bold underline font-serif mb-5'><p className='text-orange-500'>D</p>haba</h1>
           <p className="text-gray-400 text-sm">
             Bringing you the best food from top restaurants with fast delivery.
           </p>
@@ -32,7 +32,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Your Company. All rights reserved.
+        © {new Date().getFullYear()} Dhaba. All rights reserved.
       </div>
     </footer>
   );

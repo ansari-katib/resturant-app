@@ -8,6 +8,7 @@ import ResturantsCards from '../Components/LandingPageComponents/ResturantsCards
 import ContactUsForm from '../Components/LandingPageComponents/ContactUsForm';
 import FAQ from '../Components/LandingPageComponents/FAQ';
 import { Review } from '../Components/LandingPageComponents/Review';
+import CustomerReview from '../Components/LandingPageComponents/CustomerReview';
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
       <Filter_Content />
       <ResturantsCards />
       <Review />
+      <CustomerReview />
       <FAQ />
       <ContactUsForm />
       <Footer />

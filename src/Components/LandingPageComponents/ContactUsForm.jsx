@@ -23,7 +23,7 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-10 bg-orange-50">
+    <div id="contact-section" className="flex justify-center items-center py-10 bg-orange-50">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg border border-purple-200"

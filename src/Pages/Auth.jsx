@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Footer from "../Components/Common/Footer";
+import { Navbar } from "../Components/Common/Navbar";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true); // true = login, false = signup
@@ -26,7 +28,9 @@ const Auth = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
+    <>
+    <Navbar />
+    <div className="flex justify-center items-center min-h-screen bg-orange-50 px-4">
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">
           {isLogin ? "Login" : "Sign Up"}
@@ -72,7 +76,7 @@ const Auth = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="Enter password"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               required
             />
           </div>
@@ -80,7 +84,7 @@ const Auth = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
+            className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-500 transition"
           >
             {isLogin ? "Login" : "Sign Up"}
           </button>
@@ -91,13 +95,15 @@ const Auth = () => {
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button
             onClick={() => setIsLogin(!isLogin)}
-            className="text-blue-500 hover:underline"
+            className="text-orange-500 hover:underline"
           >
             {isLogin ? "Sign Up" : "Login"}
           </button>
         </p>
       </div>
     </div>
+    <Footer />
+                </>
   );
 };
 

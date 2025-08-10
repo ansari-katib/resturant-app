@@ -1,42 +1,42 @@
 [
     {
-        "title" : "first",
-        "content" : [
-            "privacy & policy",
-            "contact",
-            "services",
-            "about us",
-            "lorem"
-        ]
-    },
-        {
-        "title" : "second",
-        "content" : [
-            "privacy & policy",
-            "contact",
-            "services",
-            "about us",
-            "lorem"
-        ]
-    },
-        {
-        "title" : "third",
-        "content" : [
-            "privacy & policy",
-            "contact",
-            "services",
-            "about us",
-            "lorem"
+        "title": "Quick Links",
+        "content": [
+            "Home",
+            "Menu",
+            "Special Offers",
+            "Order Online",
+            "Contact Us"
         ]
     },
     {
-        "title" : "fourth",
-        "content" : [
-            "privacy & policy",
-            "contact",
-            "services",
-            "about us",
-            "lorem"
+        "title": "Customer Service",
+        "content": [
+            "Help & Support",
+            "Track Order",
+            "Return & Refund Policy",
+            "FAQs",
+            "Feedback"
+        ]
+    },
+    {
+        "title": "About Us",
+        "content": [
+            "Our Story",
+            "Chefs & Team",
+            "Careers",
+            "Gallery",
+            "Blog"
+        ]
+    },
+    {
+        "title": "Legal",
+        "content": [
+            "Privacy Policy",
+            "Terms & Conditions",
+            "Food Safety Policy",
+            "Delivery Policy",
+            "Disclaimer"
         ]
     }
 ]

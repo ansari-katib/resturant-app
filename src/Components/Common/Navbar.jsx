@@ -16,6 +16,7 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import res_image_1 from '../../assets/res_3.jpg';
 import res_image_2 from '../../assets/res_2.jpg';
+import { useLocation } from 'react-router-dom'
 
 const navigation = {
   categories: [
@@ -131,15 +132,17 @@ const navigation = {
     },
   ],
   pages: [
-    { name: 'About Us', href: '#' },
-    { name: 'Contact', href: '#' },
-    { name: 'Reservations', href: '#' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/' },
+    { name: 'Reservations', href: '/reservation' },
   ],
 };
 
-
 export default function Example() {
   const [open, setOpen] = useState(false)
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <div className="bg-white">
@@ -229,7 +232,13 @@ export default function Example() {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {navigation.pages.map((page) => (
                 <div key={page.name} className="flow-root">
-                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                  <a
+                    href={page.href}
+                    className={`-m-2 block p-2 font-medium ${isActive(page.href)
+                      ? "text-orange-500 bg-orange-100 rounded-md"
+                      : "text-gray-900 hover:text-orange-400"
+                      }`}
+                  >
                     {page.name}
                   </a>
                 </div>
@@ -271,14 +280,14 @@ export default function Example() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span className="sr-only">Your Company</span>
+                <a href="/">
+                  <span className="sr-only">Dhaba</span>
                   {/* <img
                     alt=""
                     className="h-8 w-auto"
                     src=''
                   /> */}
-                  <h1 className='text-2xl flex font-bold underline font-serif'><p className='text-orange-500'>apna</p>Dhaba</h1>
+                  <h1 className='text-2xl flex font-bold underline font-serif'><p className='text-orange-500'>D</p>haba</h1>
                 </a>
               </div>
 
@@ -355,7 +364,10 @@ export default function Example() {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      className={`flex items-center text-sm font-medium px-2 py-1 rounded-md transition-colors ${isActive(page.href)
+                          ? "text-orange-500 "
+                          : "text-gray-700 hover:text-orange-400"
+                        }`}
                     >
                       {page.name}
                     </a>
