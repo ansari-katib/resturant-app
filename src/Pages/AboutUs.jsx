@@ -2,6 +2,7 @@ import React from 'react';
 import dhabaImage from '../assets/res_2.jpg';
 import Footer from '../Components/Common/Footer';
 import { Navbar } from '../Components/Common/Navbar';
+import CustomerReview from '../Components/LandingPageComponents/CustomerReview';
 
 const AboutUs = () => {
   return (
@@ -65,7 +66,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-
+      <CustomerReview />
       <Footer />
     </>
   );

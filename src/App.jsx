@@ -6,6 +6,8 @@ import Auth from '../src/Pages/Auth'
 import ContactUsForm from './Components/LandingPageComponents/ContactUsForm'
 import AboutUs from './Pages/AboutUs'
 import BookYourSeat from './Pages/BookYourSeat'
+import OrderFood from './Pages/OrderFood'
+import ContactUs from './Pages/ContactUs'
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <Route path={'/auth'} element={<Auth />} />
       <Route path={'/about'} element={<AboutUs />} />
       <Route path={'/reservation'} element={<BookYourSeat />} />
+      <Route path={'/order-food'} element={<OrderFood />} />
+      <Route path={'/contact'} element={<ContactUs />} />
      </Routes>
     </BrowserRouter>
   )

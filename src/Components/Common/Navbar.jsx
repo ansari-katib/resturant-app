@@ -17,6 +17,7 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 import res_image_1 from '../../assets/res_3.jpg';
 import res_image_2 from '../../assets/res_2.jpg';
 import { useLocation } from 'react-router-dom'
+import Footer from './Footer';
 
 const navigation = {
   categories: [
@@ -133,7 +134,7 @@ const navigation = {
   ],
   pages: [
     { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Reservations', href: '/reservation' },
   ],
 };
@@ -378,9 +379,9 @@ export default function Example() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
 
-                  <div className="flex items-center bg-gray-200 rounded-xl p-2 border border-gray-400">
+                  <div className="flex items-center bg-gray-100 rounded-xl p-2 border border-orange-400">
                     <input
-                      className="bg-gray-200 outline-none flex-1"
+                      className="bg-gray-100 outline-none flex-1"
                       placeholder="Enter here"
                     />
                     <MagnifyingGlassIcon
@@ -417,6 +418,7 @@ export default function Example() {
     </div>
   )
 }
+
 
 export const Navbar = () => {
   return (

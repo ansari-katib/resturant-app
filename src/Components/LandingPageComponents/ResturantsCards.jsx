@@ -1,7 +1,14 @@
 import React from "react";
 import restaurantsData from "../../Json/CardContents.js";
+import { Link , useNavigate } from "react-router-dom";
 
 const ResturantsCards = () => {
+  const navigate = useNavigate();
+
+  const handelClick = () => {
+    navigate('/reservation')
+  }
+
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 py-12">
       <h2 className="text-3xl font-extrabold text-center mb-10 relative text-gray-800">
@@ -52,11 +59,11 @@ const ResturantsCards = () => {
 
                 {/* Button */}
                 <div className="flex gap-2" >
-                  <button className="mt-5 w-full text-sm bg-black text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
-                    Book Seat
+                  <button className="mt-5 hover:cursor-pointer w-full text-sm bg-black text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                   <Link to={'/reservation'} >Book Seat</Link>
                   </button>
-                  <button className="mt-5 w-full text-sm  bg-black text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
-                    Order Food
+                  <button className="mt-5 hover:cursor-pointer w-full text-sm  bg-black text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                    <Link to={'/order-food'} >Order Food</Link>
                   </button>
                 </div>
 

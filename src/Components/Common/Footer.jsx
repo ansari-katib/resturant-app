@@ -1,5 +1,6 @@
 import React from "react";
 import footerData from "../../Json/FooterContent.json"; // your JSON file
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,7 +8,9 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-6 gap-8">
         {/* Company Logo Section */}
         <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start">
-            <h1 className='text-2xl flex font-bold underline font-serif mb-5'><p className='text-orange-500'>D</p>haba</h1>
+          <h1 className="text-2xl flex font-bold underline font-serif mb-5">
+            <p className="text-orange-500">D</p>haba
+          </h1>
           <p className="text-gray-400 text-sm">
             Bringing you the best food from top restaurants with fast delivery.
           </p>
@@ -20,11 +23,19 @@ const Footer = () => {
               {section.title}
             </h3>
             <ul className="space-y-2">
-              {section.content.map((link, idx) => (
-                <li key={idx} className="hover:underline cursor-pointer">
-                  {link}
-                </li>
-              ))}
+              {section.content.map((linkObj, idx) => {
+                const [text, url] = Object.entries(linkObj)[0]; // Extract key & value
+                return (
+                  <li key={idx}>
+                    <Link
+                      to={url}
+                      className="hover:underline cursor-pointer text-gray-400 hover:text-white"
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}

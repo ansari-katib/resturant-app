@@ -1,42 +1,42 @@
 [
-    {
-        "title": "Quick Links",
-        "content": [
-            "Home",
-            "Menu",
-            "Special Offers",
-            "Order Online",
-            "Contact Us"
-        ]
-    },
-    {
-        "title": "Customer Service",
-        "content": [
-            "Help & Support",
-            "Track Order",
-            "Return & Refund Policy",
-            "FAQs",
-            "Feedback"
-        ]
-    },
-    {
-        "title": "About Us",
-        "content": [
-            "Our Story",
-            "Chefs & Team",
-            "Careers",
-            "Gallery",
-            "Blog"
-        ]
-    },
-    {
-        "title": "Legal",
-        "content": [
-            "Privacy Policy",
-            "Terms & Conditions",
-            "Food Safety Policy",
-            "Delivery Policy",
-            "Disclaimer"
-        ]
-    }
+  {
+    "title": "Quick Links",
+    "content": [
+      { "Home": "/" },
+      { "Menu": "#" },
+      { "Special Offers": "#" },
+      { "Order Online": "#" },
+      { "Contact Us": "/contact" }
+    ]
+  },
+  {
+    "title": "Customer Service",
+    "content": [
+      { "Help & Support": "#" },
+      { "Track Order": "#" },
+      { "Return & Refund Policy": "#" },
+      { "FAQs": "#" },
+      { "Feedback": "#" }
+    ]
+  },
+  {
+    "title": "About Us",
+    "content": [
+      { "Our Story": "/about" },
+      { "Chefs & Team": "#" },
+      { "Careers": "#" },
+      { "Gallery": "#" },
+      { "Blog": "#" }
+    ]
+  },
+  {
+    "title": "Legal",
+    "content": [
+      { "Privacy Policy": "#" },
+      { "Terms & Conditions": "#" },
+      { "Food Safety Policy": "#" },
+      { "Delivery Policy": "#" },
+      { "Disclaimer": "#" }
+    ]
+  }
 ]

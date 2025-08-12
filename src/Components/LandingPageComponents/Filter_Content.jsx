@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaChevronDown, FaUser } from "react-icons/fa";
 
 const Filter_Content = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -33,23 +34,34 @@ const Filter_Content = () => {
 
       {/* Sort By Dropdown */}
       <div className=" mx-3 md:flex md:items-center gap-4 mb-4">
-        <select
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-          className="border border-gray-400 text-gray-500 p-2 rounded"
-        >
-          {SortByData[0].action.map((option) => (
-            <option key={option}>{option}</option>
-          ))}
-        </select>
+
+        <div className="relative inline-block">
+          {/* User icon */}
+          <FaUser className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+          {/* Dropdown */}
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="appearance-none border border-gray-400 text-gray-500 p-2 pl-8 pr-8 rounded"
+          >
+            {SortByData[0].action.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
+          </select>
+          {/* Down arrow */}
+          <FaChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+        </div>
+
 
         {/* Filter Button */}
         <button
           onClick={toggleFilter}
-          className="px-3 py-3 ml-1 bg-gray-100 rounded-xl text-gray-500 hover:bg-gray-200"
+          className="px-2 mt-2 md:mt-0 py-[10px] flex items-center gap-2 sm:px-3 sm:py-[10px] ml-1 bg-gray-100 rounded-xl text-gray-500 hover:bg-gray-200"
         >
           {Filterdata[0].dropdown}
+          <FaChevronDown/>
         </button>
+
 
         {/* Static sort buttons row */}
         <div className="flex flex-wrap md:flex md:items-center gap-2 overflow-x-auto scrollbar-hide py-2">
